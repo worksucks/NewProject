@@ -1,0 +1,2228 @@
+* {
+	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+	font-family: "Quicksand";
+	margin: 0 auto;
+	background-color: #dcdcdc;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+	margin: 0 auto;
+}
+
+.clearfix::before,
+.clearfix::after,
+.row::before, .row::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+ [class*="col-"] {
+	float: left;
+	min-height: 1px;
+	padding: 0px;
+}
+
+.col-1 { Width: 8.33%;}
+.col-2 { width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.col-13 {width: 20%;}  /* dodatkowa kolumna*/
+
+
+.col-offset-1 {margin-left: 8.33%;}
+.col-offset-2 {margin-left: 16.66%;}
+.col-offset-3 {margin-left: 25%;}
+.col-offset-4 {margin-left: 33,33%;}
+.col-offset-5 {margin-left: 41.66%;}
+.col-offset-6 {margin-left: 50%;}
+.col-offset-7 {margin-left: 58.33%;}
+.col-offset-8 {margin-left: 66.66%;}
+.col-offset-9 {margin-left: 75%;}
+.col-offset-10 {margin-left: 83.33%;}
+.col-offset-11 {margin-left: 91.66%;}
+.col-offset-12 {margin-left: 100%;}
+
+/* Styling all panels*/
+
+.panel {
+  background: #fff;
+  margin: 20px 20px 20px 220px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.panel h3 {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dcdcdc;
+  color:#A0AAAB;
+}
+
+/* sidebar */
+
+.sidebar {
+  width: 200px;
+  background: #111;
+  color: #888;
+  height: 100vh;
+  min-height: 450px;
+  float: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar .title h2 {
+    font-family: "Courgette";
+    margin: 10px;
+    color: #ffffff;
+}
+
+.sidebar .title .fa {
+   font-size: 20px;
+   float: right;
+   margin: 5px;
+   position: relative;
+   right: 5%;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar .menu {
+  margin-top: 20px;
+}
+
+.sidebar .menu a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}
+
+.sidebar .menu [class*="icon-"] {
+  margin: 0 20px;
+
+}
+
+.sidebar .menu a:hover {
+   border-left: 4px solid #FF5733;
+   background: #333;
+   color: white;
+}
+
+.sidebar .menu a:hover [class*="icon-"] {
+   background: #333;
+   fill: white;
+}
+
+.sidebar .user-info {
+  border-top: 1px solid #333;
+  padding: 20px;
+}
+
+.sidebar .user-info  img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.sidebar .user-info h3 {
+  font-size: 15px;
+  float: right;
+  position: relative;
+  left: -30%;
+  margin-bottom: 10px;
+}
+
+.sidebar .user-info h2 {
+  font-size: 15px;
+  color: #32C2B9;
+  float: right;
+  position: relative;
+  left: -10%;
+  margin-top: 20px;
+}
+
+.sidebar .user-info:hover {
+  cursor: pointer;
+  background-color:#484E4F;
+}
+
+.sidebar .dot {
+  float: right;
+  position: relative;
+  left: -10%;
+}
+
+.sidebar .top-menu {
+  display: none;
+}
+
+.sidebar .top-menu {
+  margin-left: 20px;
+}
+
+.sidebar .top-menu [class*="top-menu-"] {
+  height: 40px;
+}
+
+.sidebar .top-menu [class*="icon"] {
+  fill: #fff;
+}
+
+.sidebar .top-menu-amount h3, svg {
+  display: inline-block;
+}
+
+.sidebar .top-menu-amount h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  top: -3px;
+}
+
+.sidebar .top-menu-bell .dot  {
+    height: 8px;
+    width: 8px;
+    background-color: #ff6600;
+    border-radius: 50%;
+    position: relative;
+    left: -137px;
+}
+
+.sidebar .top-menu-name svg, p {
+  display: inline-block;
+}
+
+.sidebar .top-menu-bell p {
+  margin-left: 5px;
+  position: relative;
+  top: -3px;
+}
+
+.sidebar .top-menu-name p {
+  margin-left: 5px;
+  position: relative;
+  top: -3px;
+}
+
+.sidebar .top-menu-exit p {
+  margin-left: 5px;
+  position: relative;
+  top: -3px;
+}
+/* End of sidebar */
+/*header - początek */
+
+ header [class*="icon-"] {
+	margin-top: 5px;
+  fill: #A0AAAB;
+}
+
+header [class*="header-"] {
+  height: 60px;
+}
+
+.header-all {
+  text-align: right;
+  height: 50px;
+  background-color: #ffffff;
+  color: #A0AAAB;
+}
+
+.header-amount {
+  width: 200px;
+  padding-top: 10px;
+  margin-right: -5px;
+  height: 50px;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+  position: relative;
+  top: -24px;
+}
+
+.header-amount h3 {
+  text-align: center;
+  margin-right: 5px;
+  width: 100px;
+}
+.header-amount .icon-wallet {
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+}
+.header-amount .icon-arrow-down {
+  position: relative;
+  top: 5px;
+  margin-right: 15px;
+}
+
+.header-bell {
+  width: 50px;
+  height: 50px;
+  margin-right: -5px;
+  text-align: center;
+  padding-top: 10px;
+  position: relative;
+  top: -20px;
+}
+
+.header-bell .dot  {
+    height: 8px;
+    width: 8px;
+    background-color: #ff6600;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.header-name {
+  width: 200px;
+  height: 50px;
+  padding-top:10px;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+}
+
+.header-name1 {
+  position:relative;
+}
+
+.header-name p {
+  position:absolute;
+  left: 45px;
+  top: 10px;
+  margin-right: 15px;
+  }
+
+.header-name svg {
+  float: left;
+  margin-left: 15px;
+  position: relative;
+  top: 3px;
+}
+
+.header-exit {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  margin-left: -5px;
+  position: relative;
+  top: -20px;
+}
+
+.header-amount h3 {
+  display: inline-block;
+}
+
+.header-name p {
+  display: inline-block;
+  font-size: 15px;
+  color: #1C9CBE;
+}
+
+.header-amount, .header-bell, .header-name, .header-exit {
+  display: inline-block;
+}
+
+/*header - koniec */
+/* display dates */
+
+.dates-choice {
+  height: 80px;
+  text-align: center;
+  margin-top: 30px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.enter-dates {
+  position:relative;
+}
+
+.dates-choice .separator, .enter-dates, span, button {
+  display: inline-block;
+}
+
+.dates-choice .separator {
+  position: absolute;
+  top: 10px;
+  width: 1px;
+  height: 25px;
+  border: 1px solid #dcdcdc;
+}
+
+.dates-choice .InputDate {
+  margin-left: 5px;
+  height: 40px;
+  width: 150px;
+  text-align: center;
+  box-shadow: none;
+  border-style: none;
+}
+
+.dates-choice .enter-dates {
+  border: 1px solid #dcdcdc;
+}
+
+.enter-dates .InputDate {
+  width: 200px;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color:#A0AAAB;
+}
+
+.dates-choice .icon-calendar {
+  fill:#A0AAAB;
+}
+
+.enter-dates .icon-calendar {
+  position: absolute;
+  top: 6px;
+  left: 380px;
+  padding-top: 5px;
+}
+
+.dates-choice button {
+  padding-bottom: 3px;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 10%;
+  height:45px;
+  width: 45px;
+}
+
+.dates-choice button .icon-refresh {
+  font-size:20px;
+  margin-top:3px;
+  fill: #ffffff;
+}
+
+/*Statisctics*/
+
+.statistics {
+  height: 150px;
+  padding-top: 20px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.statistics .line h4 {
+  padding-top: 20px;
+  border-bottom: 1px solid #dcdcdc;
+  color:#A0AAAB;
+}
+
+.statistics .line p {
+  padding-top: 20px;
+  width: 100%;
+  text-align: right;
+  border-bottom: 1px solid #dcdcdc;
+  color:#A0AAAB;
+}
+
+/* end of statistics*/
+
+.earnings .col-13 p {
+    height: 40px;
+    width: 90%;
+    margin-left: 15%;
+    padding-top: 10px;
+    text-align: center;
+    background-color: #dcdcdc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dot  {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.dot-signups {
+  background-color:#8DBEC8;
+}
+
+.dot-ftd {
+  background-color:#F29E4E;
+}
+
+.dot-earned {
+  background-color:#71B374;
+}
+
+.dot-green {
+  background-color:#18AF0B;
+}
+
+.earnings .chart-container {
+  margin: 0 auto;
+  height: 600px;
+  width: 800px;
+}
+
+img {
+  width: 100%;
+}
+/* DETAILS STATISTICS*/
+
+.details table {
+width: 100%;
+height: 100%;
+border:0px;
+border-collapse: collapse;
+border-spacing:0px;
+margin-left: 10px;
+}
+
+.details th {
+  font-family: "Quicksand";
+  color: #A0AAAB;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.details th p {
+  width: 100%;
+  padding-left: 3px;
+}
+
+.details td:first-child {
+  padding-left: 5px;
+}
+
+.details .icon-arrow-up-small {
+  position: relative;
+  left: 5%;
+  top: 4px;
+  margin-right: 5px;
+  fill: #A0AAAB;
+  display: none;
+}
+
+.details tr {
+  font-family: "Quicksand";
+  color:  #A0AAAB;
+  font-size: 15px;
+  height: 40px;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.details .tracker_name {
+  width: 8.5%;
+  text-align: left;
+}
+
+.details .initiated_date {
+  width: 8.5%;
+  text-align: left;
+}
+
+.details .visits {
+  width:6%;
+  text-align: left;
+}
+
+.details .unique {
+  width: 6%;
+  text-align: left;
+}
+
+.details .signups {
+  width: 6%;
+  text-align: left;
+}
+
+.details .ftd {
+  width: 6%;
+  text-align: left;
+}
+
+.details .depositors {
+  width: 7%;
+  text-align: left;
+}
+
+.details .deposits {
+  width: 7.5%;
+  text-align: left;
+}
+
+.details .payout {
+  width: 6%;
+  text-align: left;
+}
+
+.details .turnover {
+  width: 7%;
+  text-align: left;
+}
+
+.details .deal {
+  width: 7%;
+  text-align: left;
+}
+
+.details ul {
+  list-style-type: none;
+  float: right;
+  text-align: center;
+  position: relative;
+  left: -35%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+  width:35%;
+}
+
+.details ul li {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-right: -4px;
+  color: #1C9CBE;
+  text-align: center;
+  padding-top: 5px;
+  width: 8%;
+  height: 40px;
+}
+
+.details li:hover {
+  background-color: #dcdcdc;
+  border-color:#dcdcdc;
+  cursor: pointer;
+}
+
+.details th:hover p {
+  background-color: #dcdcdc;
+  border-color:#dcdcdc;
+  cursor: pointer;
+  color: #000000;
+}
+
+.details th:hover svg {
+  display: inline-block;
+}
+
+.details tr:hover td {
+  background-color: #dcdcdc;
+  border-color:#dcdcdc;
+  cursor: pointer;
+}
+
+/*LINKS*/
+
+.links button {
+  float: right;
+  position: relative;
+  left: -45%;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #ff6600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10%;
+  font-size: 20px;
+}
+
+.links h3 {
+    text-align: left;
+}
+
+.links table {
+width: 100%;
+border:0px;
+border-collapse: collapse;
+border-spacing:0px;
+}
+
+.links td {
+  height: 40px;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.links h4 {
+  font-family: "Quicksand";
+  color:#A0AAAB;
+  width: 40%;
+}
+
+.links a:link {
+  text-decoration: none;
+}
+
+.links .link {
+  width: 40%;
+}
+
+.links .link p {
+  color: #96bace;
+  text-decoration: none;
+}
+
+.links .picture {
+  width: 5%;
+  text-align: center;
+}
+
+.links [class*="icon-"] {
+ display: none;
+}
+
+.links tr:hover {
+  border-color: #dcdcdc;
+}
+
+.links tr:hover td {
+  background-color: #dcdcdc;
+  border-color:#dcdcdc;
+  cursor: pointer;
+}
+
+.links tr:hover [class*="icon-"] {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/*BANNERS*/
+
+.banners button {
+  float: right;
+  position: relative;
+  left: -45%;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #ff6600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10%;
+  font-size: 20px;
+}
+
+.banners h3 {
+    text-align: left;
+}
+
+.banners table {
+width: 100%;
+border:0px;
+border-collapse: collapse;
+border-spacing:0px;
+}
+
+.banners td {
+  height: 40px;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.banners h4 {
+  font-family: "Quicksand";
+  color:#A0AAAB;
+  width: 40%;
+}
+
+.banners a:link {
+  text-decoration: none;
+}
+
+.banners .link {
+  width: 50%;
+}
+
+.banners .link p {
+  color: #96bace;
+  text-decoration: none;
+}
+
+.banners .picture {
+  width: 5%;
+  text-align: center;
+}
+
+.banners [class*="icon-"] {
+ display: none;
+}
+
+.banners tr:hover {
+  border-color: #dcdcdc;
+}
+
+.banners tr:hover td {
+  background-color: #dcdcdc;
+  border-color:#dcdcdc;
+  cursor: pointer;
+}
+.banners tr:hover [class*="icon-"] {
+  display: inline-block;
+  cursor: pointer;
+}
+/* PERSONAL DATA*/
+
+.personal-fields label {
+  text-align: center;
+  display: block;
+}
+
+.personal-data .personal-contact {
+  border-top: 1px solid #A0AAAB;
+  border-bottom: 1px solid #A0AAAB;
+  padding-bottom: 30px;
+}
+
+.personal-data .personal-media {
+  border-top: 1px solid #A0AAAB;
+  border-bottom: 1px solid #A0AAAB;
+  padding-bottom: 30px;
+}
+
+.personal-data .personal-wallet {
+  border-top: 1px solid #A0AAAB;
+  border-bottom: 1px solid #A0AAAB;
+  padding-bottom: 30px;
+}
+
+.personal-data .personal-login {
+  border-top: 1px solid #A0AAAB;
+  border-bottom: 1px solid #A0AAAB;
+  padding-bottom: 30px;
+}
+
+.personal-fields h4, input {
+  display: inline-block;
+}
+
+.personal-data .personal-fields h4 {
+  width: 150px;
+  height: 30px;
+  position: relative;
+  color:#A0AAAB;
+  text-align: left;
+}
+
+.personal-data input {
+  padding-left: 10px;
+  margin-top: 20px;
+  height: 40px;
+  width: 200px;
+  text-align: left;
+  box-shadow: none;
+  border-style: none;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color:#A0AAAB;
+  border: 1px solid #A0AAAB;
+}
+
+.personal-data button {
+  float: right;
+  position: relative;
+  left: -45%;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #ff6600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10%;
+  font-size: 20px;
+}
+
+/*PAYOUT*/
+
+.payout .icon-arrow-up {
+  height: 15px;
+  width: 15px;
+  fill:#A0AAAB;
+  position: relative;
+  left: 5%;
+  top: 3px;
+  display: none;
+}
+
+.payout table {
+  width: 100%;
+height: 100%;
+border:0px;
+border-collapse: collapse;
+border-spacing:0px;
+margin-left: 10px;
+}
+
+.payout table th {
+  font-family: "Quicksand";
+  color: #A0AAAB;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.payout table th p {
+  height: 70%;
+  width: 38%;
+}
+
+.payout tr {
+  font-family: "Quicksand";
+  color: #A0AAAB;
+  height: 40px;
+  font-size: 15px;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.payout th:hover p {
+  background-color: #dcdcdc;
+  border-color:#dcdcdc;
+  cursor: pointer;
+  color: #000000;
+}
+
+.payout th:hover svg {
+  display: inline-block;
+}
+
+.payout tr:hover td {
+  background-color: #dcdcdc;
+  border-color:#dcdcdc;
+  cursor: pointer;
+}
+
+.payout table .date {
+  width: 25%;
+  text-align: left;
+}
+
+.payout table .amount {
+  width: 25%;
+  text-align: left;
+}
+
+.payout table .deal {
+  width: 25%;
+  text-align: left;
+}
+
+.payout table .account {
+  width: 25%;
+  text-align: left;
+}
+
+.payout ul {
+  list-style-type: none;
+  float: right;
+  text-align: center;
+  position: relative;
+  left: -35%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+  width:35%;
+}
+
+.payout ul li {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-right: -4px;
+  color: #1C9CBE;
+  text-align: center;
+  padding-top: 5px;
+  width: 8%;
+  height: 40px;
+}
+
+.payout li:hover {
+  background-color: #dcdcdc;
+  border-color:#dcdcdc;
+  cursor: pointer;
+}
+
+/* POSTBACK */
+
+.postback .start {
+  margin-top: 20px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.postback h4 {
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: 10px;
+  color:#A0AAAB;
+}
+
+.postback .row1 {
+  height: 200px;
+}
+
+.postback .row2 {
+  height: 80px;
+}
+
+.postback label {
+  margin-left: 10px;
+}
+
+.postback .row1 input {
+  margin-top: 20px;
+  width: 97%;
+  height: 180px;
+  Margin-left: 10px;
+  margin-right: 10px;
+}
+
+.postback .row2 {
+  margin-top: 40px;
+}
+
+.postback .row2 select {
+  margin-top: 20px;
+  width: 95.5%;
+  height: 40px;
+  Margin-left: 10px;
+  margin-right: 10px;
+}
+
+.postback .icon-arrow-down {
+  position: relative;
+  left: 85%;
+  top: -30px;
+}
+
+.postback .row3 {
+  padding-top: 40px;
+}
+
+.postback .row3 .col-6 {
+  height: 180px;
+  border: 1px solid grey;
+  overflow-y: auto;
+}
+
+.postback .row3 p {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.postback .checkbox {
+  display: block;
+}
+
+/* The container checkbox */
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    width: 90%;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+}
+
+/* On mouse-over, add a grey background color
+.container-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+*/
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #fff;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0px 3px 3px 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* slider section */
+
+.slidecontainer {
+  margin-left: 5%;
+  width: 90%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    text-align: center;
+    width: 100%;
+    height: 5px;
+    outline: none;
+    margin-top: 20px;
+
+  background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0.15, #ff6600),
+        color-stop(0.15, #C5C5C5)
+    );
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #ff6600;
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #ff6600;
+    cursor: pointer;
+}
+
+.postback button {
+  float: right;
+  position: relative;
+  left: -2%;
+  text-align: center;
+  width: 130px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #ff6600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10%;
+  font-size: 20px;
+}
+
+/*ICONS*/
+
+[class*="icon-"] {
+  height: 20px;
+  width: 20px;
+}
+
+.icon-links {
+  fill:#ff6600;
+}
+
+.menu [class*="icon-"] {
+  fill: #888;
+}
+
+.menu .icon-personaldata {
+  fill: #ffffff;
+}
+
+/* MOBILE */
+
+@media (max-width: 1024px) {
+  .sidebar:not(.show) {
+      height: 50px;
+      overflow: hidden;
+      min-height: 0px;
+  }
+
+  .sidebar .top-menu {
+     display: block;
+  }
+
+  header {
+    display: none;
+  }
+
+.details table, thead, tbody, th, tr, td {
+  display: block;
+}
+
+.details thead {
+  display: none;
+}
+
+  .details tr {
+    border: 1px solid #ccc;
+    height: auto;
+  }
+
+  .details table tbody td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding: 10px;
+  }
+
+  .details tbody td:before {
+    width: 65%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .details tbody td:nth-of-type(1):before {content:"Tracker name";}
+  .details tbody td:nth-of-type(2):before {content:"Initiated date";}
+  .details tbody td:nth-of-type(3):before {content:"Visits";}
+  .details tbody td:nth-of-type(4):before {content:"Unique";}
+  .details tbody td:nth-of-type(5):before {content:"Signups";}
+  .details tbody td:nth-of-type(6):before {content:"FTD";}
+  .details tbody td:nth-of-type(7):before {content:"Depositors";}
+  .details tbody td:nth-of-type(8):before {content:"Deposits ($)";}
+  .details tbody td:nth-of-type(9):before {content:"Payout";}
+  .details tbody td:nth-of-type(10):before {content:"Turnover";}
+  .details tbody td:nth-of-type(11):before {content:"Deal";}
+
+  .details ul {
+    display: none;
+  }
+
+.links table, tbody, th, tr, td {
+  display: block;
+}
+
+  .links tr {
+    border: 1px solid #ccc;
+    height: auto;
+  }
+
+  .links table tbody td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding: 10px;
+  }
+
+  .links tbody td:before {
+    width: 65%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+.payout table, thead, tbody, th, tr, td {
+  display: block;
+}
+
+.payout thead {
+  display: none;
+}
+
+  .payout tr {
+    border: 1px solid #ccc;
+    height: auto;
+  }
+
+  .payout table tbody td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding: 10px;
+  }
+
+  .payout tbody td:before {
+    width: 65%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .payout tbody td:nth-of-type(1):before {content:"Date";}
+  .payout tbody td:nth-of-type(2):before {content:"Amount $";}
+  .payout tbody td:nth-of-type(3):before {content:"Deal";}
+  .payout tbody td:nth-of-type(4):before {content:"Account";}
+
+  .payout ul {
+    display: none;
+  }
+
+} /* KONIEC MOBILE */
+/* FORMS */
+
+.modal-body h3 {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dcdcdc;
+  color:#A0AAAB;
+}
+
+.modal-body button {
+  text-align: center;
+  font-family: "Quicksand";
+  width: 100px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #ff6600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4%;
+  font-size: 15px;
+}
+
+/* XXXXXXXXXXX */
+
+.modalAddBanners {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+}
+
+.modalAddBanners .modal-body {
+  background: #fff;
+  max-width: 900px;
+  width: 100%;
+}
+
+.modalAddBanners .icon-close {
+  position: relative;
+  top: 8px;
+  left: -10px;
+}
+
+.modalAddBanners .icon-close:hover {
+  cursor: pointer;
+  background-color: #ff0000;
+}
+
+/* Flags */
+
+.modalAddBanners .flagList {
+  position: relative;
+}
+
+.modalAddBanners ul {
+  list-style-type: none;
+  position: absolute;
+  top: 30px;
+  left: -3px;
+}
+
+
+.modalAddBanners .flagList .flagChosen {
+  border: 1px solid #A0AAAB;
+  height: 30px;
+  width: 135px;
+  padding: 0px;
+  margin-left: 5px;
+}
+
+.modalAddBanners .flagList .flags li {
+  padding: 5px;
+  width: 135px;
+  padding-left: 0px;
+  background-color: #ffffff;
+  border-right: 1px solid #A0AAAB;
+  border-bottom: 1px solid #A0AAAB;
+}
+
+.modalAddBanners .flagList .flagChosen img, .flagList .flags li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.modalAddBanners .flagList .flags {
+  width: 135px;
+  border: 1px solid #A0AAAB;
+  margin-left: 8px;
+  display: none;
+}
+
+.modalAddBanners [class*="icon-"] {
+  float: right;
+  width: 15px;
+  height: 15px;
+}
+
+.modalAddBanners .icon-show {
+  display: none;
+}
+
+.modalAddBanners .row1 {
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modalAddBanners .row1 h4 {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.modalAddBanners .row1 .h4-flag {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.modalAddBanners .row1 input, select {
+  margin-left: 10px;
+  height: 30px;
+  width: 95%;
+  text-align: left;
+  box-shadow: none;
+  border-style: none;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color:#A0AAAB;
+  border: 1px solid #A0AAAB;
+}
+
+.modalAddBanners .row1 .flag {
+  border: 1px solid #A0AAAB;
+  width: 95%;
+}
+
+.modalAddBanners .row1 .flag-drop {
+  width: 80px;
+  border: none;
+}
+
+.modalAddBanners img {
+  width: 25px;
+  height: 18px;
+  position: relative;
+  top: 4px;
+  left: 5px;
+}
+
+.modalAddBanners .row2 h4 {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.modalAddBanners .row2 {
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modalAddBanners .row2 {
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modalAddBanners .row3 {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-top: 1px solid #A0AAAB;
+}
+
+.modalAddBanners .row3 h4 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.modalAddBanners .bottom {
+  height: 200px;
+  width: 100%;
+}
+
+.modalAddBanners .generated-link, SaveBtn, CopyLinkBtn {
+  display: inline-block;
+}
+
+.modalAddBanners .label-row {
+  width: 90%;
+  height:35px;
+  margin-top: 5px;
+}
+
+.modalAddBanners label {
+  position: relative;
+  top: 7px;
+}
+
+.modalAddBanners .icon-show {
+  posiiton: relative;
+}
+
+.modalAddBanners .container-checkbox {
+  color:#A0AAAB;
+  margin-left:10px;
+  text-align: left;
+}
+
+.modalAddBanners .label-row:hover {
+  background-color: #dcdcdc;
+  border-color: #dcdcdc;
+  cursor: pointer;
+  color: #000000;
+}
+
+.modalAddBanners .checkbox {
+  display: block;
+}
+
+/* The container checkbox */
+.modalAddBanners .container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 5px;
+    width: 90%;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.modalAddBanners .container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.modalAddBanners .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.modalAddBanners input:checked ~ .checkmark {
+    background-color: #009900;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.modalAddBanners .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+.modalAddBanners input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.modalAddBanners .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0px 3px 3px 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.modalAddBanners label:hover .icon-show {
+  display: inline-block;
+}
+
+.modalAddBanners .generated-link {
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-left: 10px;
+  height: 30px;
+  width: 60%;
+  text-align: left;
+  box-shadow: none;
+  border-style: none;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color:#A0AAAB;
+  border: 1px solid #A0AAAB;
+}
+
+.modalAddBanners .CopyLinkBtn { float: right;
+  width: 150px;
+  margin-right: 20px;
+  height: 30px;
+  background-color: #A0AAAB;
+}
+
+
+.modalAddBanners .icon-links {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  float: left;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+.modalAddBanners .SaveBtn {
+  float: right;
+  height: 30px;
+  margin-right: 20px;
+}
+
+/*Scroll bar*/
+.row3 .col-6 {
+  position: relative;
+}
+
+.modalAddBanners .scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 310px;
+	width: 13px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 15px;
+  position: absolute;
+  top: 40px;
+  left: 400px;
+}
+
+.modalAddBanners .force-overflow
+{
+	min-height: 450px;
+}
+
+.modalAddBanners #style-1::-webkit-scrollbar-track
+{
+	background-color: #dcdcdc;
+}
+
+.modalAddBanners #style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.modalAddBanners #style-1::-webkit-scrollbar-thumb
+{
+	background-color: #555;
+}
+/* End scroll bar*/
+/* XXXXXXXXXXXXXXXXXXXXX */
+
+.modalAddUrl {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+}
+
+.modalAddUrl .modal-body {
+  background: #fff;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.modalAddUrl .icon-close {
+  position: relative;
+  top: 8px;
+  left: -10px;
+}
+
+.modalAddUrl .icon-close:hover {
+  cursor: pointer;
+  background-color: #ff0000;
+}
+
+/* Flags */
+
+.modalAddUrl .flagList {
+  position: relative;
+}
+
+.modalAddUrl ul {
+  list-style-type: none;
+  position: absolute;
+  top: 30px;
+  left: -3px;
+}
+
+.modalAddUrl .flagList .flagChosen {
+  border: 1px solid #A0AAAB;
+  height: 30px;
+  width: 135px;
+  padding: 0px;
+  margin-left: 5px;
+}
+
+.modalAddUrl .flagList .flags li {
+  padding: 5px;
+  width: 135px;
+  padding-left: 0px;
+  background-color: #ffffff;
+  border-right: 1px solid #A0AAAB;
+  border-bottom: 1px solid #A0AAAB;
+}
+
+.modalAddUrl .flagList .flagChosen img, .flagList .flags li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.modalAddUrl .flagList .flags {
+  width: 135px;
+  border: 1px solid #A0AAAB;
+  margin-left: 8px;
+  display: none;
+}
+
+.modalAddUrl [class*="icon-"] {
+  float: right;
+  width: 15px;
+  height: 15px;
+}
+
+.modalAddUrl .icon-show {
+  display: none;
+}
+
+.modalAddUrl .row1 {
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modalAddUrl .row1 h4 {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.modalAddUrl .row1 .h4-flag {
+  margin-left: 0px;
+  margin-bottom: 5px;
+}
+
+.modalAddUrl .row1 input, .select {
+  margin-left: 10px;
+  height: 30px;
+  width: 95%;
+  text-align: left;
+  box-shadow: none;
+  border-style: none;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color:#A0AAAB;
+  border: 1px solid #A0AAAB;
+}
+
+.modalAddUrl .row1 .select {
+  margin-top: 25px;
+}
+
+.modalAddUrl .row1 .flag {
+  border: 1px solid #A0AAAB;
+  width: 95%;
+}
+
+.modalAddUrl .row1 .flag-drop {
+  width: 80px;
+  border: none;
+}
+
+.modalAddUrl img {
+  width: 25px;
+  height: 18px;
+  position: relative;
+  top: 4px;
+  left: 5px;
+}
+
+.modalAddUrl .row2 {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  height: 440px;
+  border-top: 1px solid #A0AAAB;
+  border-bottom: 1px solid #A0AAAB;
+}
+
+.modalAddUrl .row2 h4 {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.modalAddUrl .bottom {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+.modalAddUrl .label-row {
+  width: 90%;
+  height:35px;
+  margin-top: 5px;
+}
+
+.modalAddUrl label {
+  position: relative;
+  top: 7px;
+}
+
+.modalAddUrl .icon-show {
+  posiiton: relative;
+}
+
+.modalAddUrl .container-checkbox {
+  color:#A0AAAB;
+  margin-left:10px;
+  text-align: left;
+}
+
+/* ADD Url - CHECKBOX */
+
+.modalAddUrl .checkbox {
+  display: block;
+}
+
+/* The container checkbox */
+.modalAddUrl .container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 5px;
+    width: 90%;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.modalAddUrl .container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.modalAddUrl .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.modalAddUrl input:checked ~ .checkmark {
+    background-color: #009900;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.modalAddUrl .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+.modalAddUrl input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.modalAddUrl .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0px 3px 3px 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.row2 .column3 {
+  position: relative;
+}
+
+.modalAddUrl .scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 310px;
+	width: 13px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 15px;
+  position: absolute;
+  top: 20px;
+  left: 280px;
+}
+
+.modalAddUrl .force-overflow
+{
+	min-height: 450px;
+}
+
+.modalAddUrl #style-1::-webkit-scrollbar-track
+{
+	background-color: #dcdcdc;
+}
+
+.modalAddUrl #style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.modalAddUrl #style-1::-webkit-scrollbar-thumb
+{
+	background-color: #555;
+}
+
+/*ADD URL  Footer - Bottom */
+
+.modalAddUrl .generated-link {
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-left: 10px;
+  height: 30px;
+  width: 60%;
+  text-align: left;
+  box-shadow: none;
+  border-style: none;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color:#A0AAAB;
+  border: 1px solid #A0AAAB;
+}
+
+.modalAddUrl .CopyLinkBtn { float: right;
+  width: 150px;
+  margin-right: 20px;
+  background-color: #A0AAAB;
+}
+
+.modalAddUrl .icon-links {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  float: left;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+.modalAddUrl .SaveBtn {
+  float: right;
+  margin-right: 20px;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXX */
+/* LOGIN */
+
+.modalLogin {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+}
+
+.modalLogin .modal-body {
+  background: #fff;
+  max-width: 800px;
+  width: 100%;
+}
+
+.modalLogin .login, .password, button {
+  display: inline-block;
+  text-align: center;
+}
+
+.modalLogin .login-fields {
+  height: 80px;
+  float: right;
+  position: relative;
+  top: 10px;
+  left: -5%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.modalLogin .login {
+  height: 40px;
+  width: 250px;
+  text-align: left;
+  box-shadow: none;
+  border-style: none;
+  font-family: "Quicksand";
+  font-size: 20px;
+  color:#A0AAAB;
+  border: 1px solid #A0AAAB;
+}
+
+.modalLogin .password {
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 40px;
+  width: 250px;
+  text-align: left;
+  box-shadow: none;
+  border-style: none;
+  font-family: "Quicksand";
+  font-size: 20px;
+  color:#A0AAAB;
+  border: 1px solid #A0AAAB;
+}
+
+.modalLogin svg {
+  position: relative;
+  top: 8px;
+  left: 10px;
+}
+
+.modalLogin input {
+  border: none;
+  font-family: "Quicksand";
+  font-size: 15px;
+  position: relative;
+  top: 5px;
+  left: 40px;
+}
+
+.modalLogin button {
+  position: relative;
+  top: 4px;
+  height: 40px;
+  width: 160px;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXX */
+/* ON LINE CHAT */
+
+.modalOnLine {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display:none;
+}
+
+.modalOnLine .modal-body {
+  background: #fff;
+  max-width: 800px;
+  width: 100%;
+}
+
+.modalOnLine .icon-close {
+  position: relative;
+  top: 5px;
+  left: 320px;
+}
+
+.modalOnLine img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.modalOnLine h2 {
+  position: relative;
+  left: -5px;
+}
+
+.modalOnLine p {
+  position: relative;
+  left: -5px;
+  width: 50px;
+  padding-left: 3px;
+  color: #ffffff;
+  background-color:#009933;
+}
+
+.modalOnLine img, .presence {
+  display: inline-block;
+}
+
+.modalOnLine .presence {
+  position: relative;
+  margin-left: 15px;
+  top: -15px;
+}
+
+.modalOnLine .chat {
+  width: 100%;
+  height: 120px;
+}
+
+.modalOnLine .message, button {
+  display: inline-block;
+}
+
+.modalOnLine .message {
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-left: 10px;
+  height: 30px;
+  width: 80%;
+  text-align: left;
+  box-shadow: none;
+  border-style: none;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color:#A0AAAB;
+  border: 1px solid #A0AAAB;
+}
+
+.modalOnLine .message input {
+  position: relative;
+  left: 20px;
+  border: none;
+}
+
+.modalOnLine svg {
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+.modalOnLine button {
+  float: right;
+  margin-right: 10px;
+  height: 30px;
+}
+
+/* XXXXXXXXXXXXXXXXX*/
+/* QUIT */
+
+.modalQuit {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modalQuit .modal-body {
+  background: #fff;
+  max-width: 300px;
+  width: 100%;
+  height: 120px;
+}
+
+.modalQuit button {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.modalQuit .Cancel {
+  background-color: #A0AAAB;
+}
